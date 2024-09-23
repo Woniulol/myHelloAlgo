@@ -16,10 +16,12 @@ typedef struct MyList
     int capacity;
     int size;
     int extendRatio;
-} MyList;
+}
+MyList;
 
 // Init Function
-MyList *newMyList() {
+MyList *newMyList()
+{
     MyList *nums = malloc(sizeof(MyList));
     nums->capacity = 10;
     nums->arr = malloc(sizeof(int) * nums->capacity);
@@ -29,29 +31,34 @@ MyList *newMyList() {
 }
 
 // Delete MyList Object
-void delMyList(MyList *nums) {
+void delMyList(MyList *nums)
+{
     free(nums->arr);
     free(nums);
 }
 
 // Get the size of a MyList Object
-int size(MyList *nums) {
+int size(MyList *nums)
+{
     return nums->size;
 }
 
 // Get the capacity of a MyList Object
-int capacity(MyList *nums) {
+int capacity(MyList *nums)
+{
     return nums->capacity;
 }
 
 // Get the val of the index
-int get(MyList *nums, int index) {
+int get(MyList *nums, int index)
+{
     assert(index >= 0 && index < nums->size);
     return nums->arr[index];
 }
 
 // Set the val on the index
-void set(MyList *nums, int index, int num) {
+void set(MyList *nums, int index, int num)
+{
     assert(index >= 0 && index < nums->size);
     nums->arr[index] = num;
 }
