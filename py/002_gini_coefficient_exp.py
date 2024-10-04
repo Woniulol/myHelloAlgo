@@ -2,6 +2,10 @@ import random
 from typing import List
 
 def cal_gini(wealth: List[int]) -> float:
+    """
+    Calculate the gini coefficient for the give int list.
+    """
+
     sum_absolute_difference: int = 0
     sum_wealth: int = 0
 
@@ -24,6 +28,7 @@ def gini_exp(n: int, t: int) -> float:
 
     Person with 0 wealth can received but cannot give.
     """
+
     wealth = [100] * n
 
     for i in range(t):
