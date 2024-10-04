@@ -32,7 +32,7 @@ def gini_exp(n: int, t: int) -> float:
     wealth = [100] * n
 
     for i in range(t):
-        has_wealth = [i > 0 for i in wealth]
+        has_wealth = [individual > 0 for individual in wealth]
 
         for j in range(len(has_wealth)):
             if has_wealth[j]:
