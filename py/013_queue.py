@@ -1,8 +1,8 @@
 class MyCircularQueue:
 
     def __init__(self, k: int):
-        self.left: int = 0
-        self.right: int = 0
+        self.left: int = 0  # next pop index
+        self.right: int = 0  # next insert index
         self.size: int = 0
         self.limit: int = k
 
